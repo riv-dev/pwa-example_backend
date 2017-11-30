@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  pwa-example:
+    build: .
+    image: pwa-example-img
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "8100:8100"
+    environment:
+      - NODE_ENV=development
